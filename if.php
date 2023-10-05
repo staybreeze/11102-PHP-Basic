@@ -58,8 +58,3 @@ switch ($level) {
         echo "是否無心學習";
 }
 
-if(){
-
-}else if(){
-    
-}
