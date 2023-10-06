@@ -45,3 +45,10 @@ echo '<br>';
 echo $c['Hobby'][2];
 echo '<br>';
 print_r($c['Hobby']);
+
+$x=[];
+$x['lesson']=['國文','英文','數學','地理','歷史'];
+$x['judy']=['95','64','70','90','84',];
+
+print_r($x['lesson']);
+print_r($x['judy']);

@@ -24,18 +24,8 @@
 
 
 
-$sum=220;
-for($i=20;$i<=100;$i=$i){
-    echo "當$i=".$i."時";
-    echo '$sum+$i的結果是';
-    echo $sum."+".$i."=";
-    echo $sum+$i;
-    echo "<br>";
-    $sum=$sum+$i;
-}
-
 $sum=0;
-for($i=0;$i<=100;$i=$i+2){
+for($i=1;$i<=10;$i=$i+1){
     echo "當$i=".$i."時";
     echo '$sum+$i的結果是';
     echo $sum."+".$i."=";
@@ -44,5 +34,43 @@ for($i=0;$i<=100;$i=$i+2){
     $sum=$sum+$i;
 }
 
+// $sum=0;
+// for($i=0;$i<=100;$i=$i+2){
+//     echo "當$i=".$i."時";
+//     echo '$sum+$i的結果是';
+//     echo $sum."+".$i."=";
+//     echo $sum+$i;
+//     echo "<br>";
+//     $sum=$sum+$i;
+// }
+
+?>
+<hr>
+
+
+<h3>陣列</h3>
+
+<?php
+
+$a=['甲','乙','丙','丁','戊','己'];
+for($i=0;$i<count($a);$i++){
+    echo $a[$i];
+}
+
+// $b=$a[0];
+// $b=$a[1];
+// $b=$a[2]
+echo'<br>';
+echo'<hr>';
+foreach($a as $b){
+echo $b;
+
+}
+echo'<br>';
+echo'<hr>';
+foreach ($a as $idx => $b) {
+    echo $idx . "=>".$b;
+    echo "<br>";
+}
 
 ?>
