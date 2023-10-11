@@ -46,7 +46,7 @@ $sum = 0;
 $i = 1;
 while ($i <= 10) {
 
-    echo "當$i=" . $i . "時";
+    echo '當$i=' . $i . "時";
     echo '$sum+$i的結果是';
     echo $sum . "+" . $i . "=";
     echo $sum + $i;
@@ -68,7 +68,7 @@ echo "<hr>";
 
 </ul>
 <?php
-$n = 100;
+// $n = 0;
 for ($i = 1; $i <= 100; $i = $i + 2) {
 
     echo $i;
@@ -76,17 +76,22 @@ for ($i = 1; $i <= 100; $i = $i + 2) {
 }
 echo "<hr>";
 
-for ($i = 1; $i <= $n; $i++) {
-    echo $i * 10;
-    echo ",";
-}
+// for ($i = 10; $i <= 100; $i+=10) {
+//     echo $i;
+//     echo ",";
+// }
+
+for ($i = 1; $i <= 100; $i+=1) {
+         echo $i*10;
+         echo ",";
+     }
 
 echo "<hr>";
 
 
 $a = 4;
 $flag = true;
-for ($i = 2; $i < $a / 2; $i++) {
+for ($i = 2; $i <= $a / 2; $i++) {
     // %不需要判斷1跟自己，因為都能被整除，因此小於即可，不用小於等於
     // $i<$a/2比$i<$a省一半時間
     echo "$a / $i 餘數=" . ($a % $i);
