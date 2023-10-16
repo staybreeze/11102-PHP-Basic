@@ -124,22 +124,35 @@ echo "</table>";
 
 
 
-<h2>九九乘法表(有表頭)</h2> 
+<h2>九九乘法表(有表頭)</h2>
+
+
+
+
+
+
 <?php
 echo "<table>";
 
 for ($j = 0; $j < 10; $j++) {
     echo "<tr>";
-    if ($j == 0) {
-        echo "<tr style='background:#eee;'>";
-    }
 
 
+    // if ($j == 0) {
+    //     echo "<tr style='background:#eee;'>";
+
+    // }
     for ($i = 0; $i < 10; $i++) {
-        echo "<td>";
-        if ($i == 0) {
-            echo " <td style='background:#eee;'>";
+        echo "<td";
+
+        if ($j == 0 || $i == 0) {
+            echo " style='background:#eee;'";
         }
+
+        echo ">";
+
+        
+
 
         if ($j == 0 && $i == 0) {
             echo "";
@@ -154,9 +167,11 @@ for ($j = 0; $j < 10; $j++) {
     }
     echo "</tr>";
 }
-
 echo "</table>";
 ?>
+
+<!-- 這部分的語法是不正確的，因為您不應該在 <td> 開始標記中添加其他 HTML 標記。正確的方式是像在第一段程式碼中一樣，將 style 屬性添加到 <td> 開始標記的內部，而不是包含在其他 <td> 中。這將為單元格的內容指定背景顏色。
+ -->
 
 
 
