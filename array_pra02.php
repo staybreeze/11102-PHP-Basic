@@ -187,7 +187,7 @@ $a=[8,7,890,56,84,90];
 echo"<pre>";
 print_r($a);
 echo"</pre>";
-
+// floor(count($a)/2) ->因為只有一半要交換，因此算出陣列一半的數，即執行次數
 for($i=0;$i<floor(count($a)/2);$i++){
 // 先把值儲存在$tmp
     $tmp=$a[$i];
