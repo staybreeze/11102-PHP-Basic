@@ -100,3 +100,43 @@ if (date("N") <= 5) {
 } else {
     echo "今天是" . date("西元Y年m月d日") . " 假日";
 }
+
+
+?>
+
+<h2>利用迴圈來計算連續五個周一的日期</h2>
+
+<?php
+$todayWeek=date("N");
+echo $todayWeek;
+$diff=1-$todayWeek;
+
+$lastMonday=strtotime("$diff days");
+echo date("Y-m-d",$lastMonday);
+echo"<br>";
+echo date("Y-m-d",strtotime("+1 week",$lastMonday));
+echo"<br>";
+echo date("Y-m-d",strtotime("+7 days",$lastMonday));
+
+echo "<hr>";
+?>
+<?php
+$todayWeek=date("N");
+$diff=1-$todayWeek;
+$lastMonday=strtotime("$diff days");
+$nextMonday=date("Y-m-d",strtotime("+1 week",$lastMonday));
+
+for($i=0;$i<5;$i++){
+    $nextMonday=date("Y-m-d",strtotime("+1 week", strtotime($nextMonday)));
+    echo $nextMonday;
+    echo "<br>";
+}
+
+
+// 1-1 0
+// 2-1 1
+// 3-1 2
+// 4-1 3
+// 5-1 4
+// 6-1 5
+// 7-1 6
