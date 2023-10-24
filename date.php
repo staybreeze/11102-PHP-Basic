@@ -49,7 +49,7 @@ if ($diff > $today) {
     $days = ($diff - $today) / (60 * 60 * 24);
 }
 
-echo "距離下一次生日:" . date("Y-m-d", $diff) . "還有" . floor($days) . "天";
+echo "距離下一次生日" . date("Y-m-d", $diff) . "還有" . floor($days) . "天";
 ?>
 
 <h2>利用date()函式的格式化參數，完成以下的日期格式呈現</h2>
@@ -110,7 +110,9 @@ if (date("N") <= 5) {
 $todayWeek=date("N");
 echo $todayWeek;
 $diff=1-$todayWeek;
-
+echo "<br>";
+echo $diff;
+echo "<br>";
 $lastMonday=strtotime("$diff days");
 echo date("Y-m-d",$lastMonday);
 echo"<br>";

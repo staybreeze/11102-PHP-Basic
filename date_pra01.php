@@ -130,9 +130,13 @@
     $thisFirstDay = date("Y-m-1");
     $thisFirstDate = date("w", strtotime($thisFirstDay));
     echo $thisFirstDate;
+    echo "<br>";
     $thisMonthDays = date("t");
+    echo     $thisMonthDays;
+    echo "<br>";
     $thisLastDay1 = date("Y-m-$thisMonthDays");
     $thisLastDay2 = date("Y-m-t");
+    echo $thisLastDay1;
     echo "<br>";
     $weeks = ceil(($thisMonthDays + $thisFirstDate) / 7);
     echo $weeks;
@@ -205,7 +209,7 @@
             $addDays = 7 * $i + $j;
 
             $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
-
+            echo date("Y-m-d", $thisCellDate);
 
             echo "</td>";
         }
