@@ -32,9 +32,11 @@ echo "<br><hr><br>";
 $date = "1974-10-07";
 // 計算秒數
 $br = strtotime($date);
-// 當年生日的位置
+// 當前生日的位置
+echo $br;
 $diff = strtotime(date("Y") . "-" . date("m-d", $br));
 // 計算現在的秒
+
 $today = strtotime('now');
 // 計算當下時間跟當年生日的差距
 if ($diff > $today) {
